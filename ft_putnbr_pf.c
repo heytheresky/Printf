@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_prinft.h                                        :+:      :+:    :+:   */
+/*   ft_putnbr_pf.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bbastos- <bbastos-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/11 12:02:40 by bbastos-          #+#    #+#             */
-/*   Updated: 2025/11/17 11:19:10 by bbastos-         ###   ########.fr       */
+/*   Created: 2025/11/17 10:06:05 by bbastos-          #+#    #+#             */
+/*   Updated: 2025/11/17 10:53:17 by bbastos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "printf.h"
 
-# include <stdarg.h>
-# include <stddef.h>
-# include <unistd.h>
+int	ft_putnbr_pf(int n)
+{
+	int			len;
+	long int	nb;
 
-int	ft_prinf(const char *, ...);
-int	ft_putchar_pf(char c);
-int	ft_putstr_pf(const char *str);
-int	ft_putnbr_pf(int n);
-int	ft_printdec(unsigned int nb);
-int	ft_printhex(unsigned long int nb, int caseflag);
-
-#endif
+	nb = n;
+	len = 0;
+	if (nb < 0)
+	{
+		nb *= -1;
+		len += ft_putchar_pf('-');
+	}
+	if (nb > 9)
+		len += ft_putnbr_pf(nb / 10);
+	len += ft_putchar_pf((nb % 10) + '0');
+	return (len);
+}

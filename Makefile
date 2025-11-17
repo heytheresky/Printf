@@ -6,7 +6,7 @@
 #    By: bbastos- <bbastos-@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/06 09:04:24 by bbastos-          #+#    #+#              #
-#    Updated: 2025/11/11 12:02:11 by bbastos-         ###   ########.fr        #
+#    Updated: 2025/11/17 11:19:27 by bbastos-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,8 @@ CC = cc
 CFLAGS = -Wall -Werror -Wextra
 RM = rm -f
 
-SRCS =
+SRCS = ft_printf.c ft_putchar_pf.c ft_putstr_pf.c\
+	   ft_putnbr_pf.c ft_printdec.c ft_printhex.c\
 
 OBJS = $(SRCS:.c=.o)
 

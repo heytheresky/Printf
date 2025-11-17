@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_prinft.h                                        :+:      :+:    :+:   */
+/*   ft_putstr_pf.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bbastos- <bbastos-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/11 12:02:40 by bbastos-          #+#    #+#             */
-/*   Updated: 2025/11/17 11:19:10 by bbastos-         ###   ########.fr       */
+/*   Created: 2025/11/11 13:11:52 by bbastos-          #+#    #+#             */
+/*   Updated: 2025/11/17 11:47:53 by bbastos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "printf.h"
 
-# include <stdarg.h>
-# include <stddef.h>
-# include <unistd.h>
+int	ft_putstr_pf(const char *str)
+{
+	int	i;
 
-int	ft_prinf(const char *, ...);
-int	ft_putchar_pf(char c);
-int	ft_putstr_pf(const char *str);
-int	ft_putnbr_pf(int n);
-int	ft_printdec(unsigned int nb);
-int	ft_printhex(unsigned long int nb, int caseflag);
-
-#endif
+	if (!str)
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
+	i = 0;
+	while (str[i] != '\0')
+	{
+		write(1, &str[i], 1);
+		i++;
+	}
+	return (i);
+}
