@@ -6,7 +6,7 @@
 #    By: bbastos- <bbastos-@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/06 09:04:24 by bbastos-          #+#    #+#              #
-#    Updated: 2025/11/17 12:09:57 by bbastos-         ###   ########.fr        #
+#    Updated: 2025/11/17 12:16:19 by bbastos-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ RM = rm -f
 
 SRCS = ft_printf.c ft_putchar_pf.c ft_putstr_pf.c\
 	   ft_putnbr_pf.c ft_printdec.c ft_printhex.c\
+	   ft_printptr.c
 
 OBJS = $(SRCS:.c=.o)
 
