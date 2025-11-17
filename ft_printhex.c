@@ -6,7 +6,7 @@
 /*   By: bbastos- <bbastos-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 11:17:20 by bbastos-          #+#    #+#             */
-/*   Updated: 2025/11/17 11:46:05 by bbastos-         ###   ########.fr       */
+/*   Updated: 2025/11/17 11:51:37 by bbastos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ int	main(void)
 {
 	int num = 255;
 
-	printf("\nreturn --> %d\n",ft_hexprint(num, 1));
-	printf("\nreturn --> %d\n",ft_hexprint(num, 0));
+	printf("\nreturn --> %d\n",ft_printhex(num, 1));
+	printf("\nreturn --> %d\n",ft_printhex(num, 0));
 }
