@@ -6,13 +6,13 @@
 #    By: bbastos- <bbastos-@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/06 09:04:24 by bbastos-          #+#    #+#              #
-#    Updated: 2025/11/17 11:19:27 by bbastos-         ###   ########.fr        #
+#    Updated: 2025/11/17 12:09:57 by bbastos-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 
-INCLUDE = libft.h
+INCLUDE = printf.h
 
 CC = cc
 CFLAGS = -Wall -Werror -Wextra
