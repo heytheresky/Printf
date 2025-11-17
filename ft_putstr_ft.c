@@ -6,7 +6,7 @@
 /*   By: bbastos- <bbastos-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 13:11:52 by bbastos-          #+#    #+#             */
-/*   Updated: 2025/11/11 13:29:33 by bbastos-         ###   ########.fr       */
+/*   Updated: 2025/11/17 09:48:14 by bbastos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_putstr_pf(const char *str)
 {
-	int i;
+	int	i;
 
 	if (!str)
 	{

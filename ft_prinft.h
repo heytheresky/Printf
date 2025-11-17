@@ -6,7 +6,7 @@
 /*   By: bbastos- <bbastos-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 12:02:40 by bbastos-          #+#    #+#             */
-/*   Updated: 2025/11/11 13:09:23 by bbastos-         ###   ########.fr       */
+/*   Updated: 2025/11/17 09:53:20 by bbastos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <unistd.h>
 
 int	ft_prinf(const char *, ...);
-int	ft_putchar_pf(char c, size_t counter);
+int	ft_putchar_pf(char c);
+int	ft_putstr_pf(const char *str);
 
 #endif
