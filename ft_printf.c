@@ -6,7 +6,7 @@
 /*   By: bbastos- <bbastos-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 12:30:40 by bbastos-          #+#    #+#             */
-/*   Updated: 2025/11/17 12:45:04 by bbastos-         ###   ########.fr       */
+/*   Updated: 2026/01/04 16:15:50 by bbastos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,27 @@ int	ft_handle_format(char spec, va_list args)
 
 int	ft_printf(const char *str, ...)
 {
+	va_list	args;
+	int		len;
+	int		i;
 
+	va_start(args, format);
+	len = 0;
+	i = 0;
+	while (format[i])
+	{
+		if (format[i] == '%')
+		{
+			i++;
+			len += ft_argscondition(args, format[i]);
+		}
+		else
+		{
+			ft_putchar(format[i]);
+			len++;
+		}
+		i++;
+	}
+	va_end(args);
+	return (len);
 }
